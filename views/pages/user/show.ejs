@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<%- include('../components/navbar') %>
+	<a href="/users">Kembali</a>
+
+	<h1>Detail User</h1>
+	<ul>
+		<li>Nama: <strong><%=user.name %></strong></li>
+		<li>Email: <strong><%=user.email %></strong></li>
+	</ul>
+
+	<a href="/users/<%=user._id %>/edit">Edit</a>
+	<a href="/users/id">Delete</a>
+
+	<hr>
+<footer>
+	
+	<p>&copy; 2021 Programming.Sri Rahayu Ningsih</p>
+	<hr>
+</footer>
+
+</body>
+</html>

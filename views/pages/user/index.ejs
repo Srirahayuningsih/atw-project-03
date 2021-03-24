@@ -1,0 +1,61 @@
+<%- include('../components/navbar') %>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>DATA USER</section>
+
+      <!-- Main content -->
+      <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-12 col-xs-12">
+            <div class="box">
+              <div class="box-header">
+                <a href="" class="btn btn-success btn-sm">Tambah data</a>
+              </div>
+              <div class="box-body">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th><center>Aksi</center></th>
+                      <th><center>No</center></th>
+                      <th><center>Name</center></th>
+                      <th><center>Email</center></th>
+                     
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% users.forEach(function(user) { %>
+                    <tr>
+                      <td>
+                        <center>
+                          <a href="" class="btn btn-warning btn-sm">Lihat</a>
+                          <a href="" class="btn btn-primary btn-sm">Edit</a>
+                          <a href="" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini ?!');">Hapus</a>
+                        </center>
+                      </td>
+                      <td><center></center></td>
+                      <td><center><%=user.name %></center></td>
+                      <td><center><%=user.email %></center></td>
+                      
+
+                    </tr>
+                    <% }) %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- ./col -->
+
+        </div>
+        <!-- /.row -->
+
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <%- include('../components/footer') %>
